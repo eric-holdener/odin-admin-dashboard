@@ -1,5 +1,9 @@
-.container, .sidebar, .sidebar-links, .header, .main-content {
+.container, .sidebar, .sidebar-links, .header, .main-content, .cards, .announcements, .trends {
   border: 2px solid red;
+}
+
+.main-left, .main-right, .card {
+  border: 2px solid green;
 }
 
 body {
@@ -18,6 +22,7 @@ body {
   grid-row: 1 / 2;
   display: grid;
   grid-template-rows: 1fr 2fr;
+  gap: 30px;
 }
 
 .sidebar {
@@ -33,6 +38,9 @@ body {
 .main-content {
   grid-column: 2;
   grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  padding-bottom: 5%;
 }
 
 .logo-container {
@@ -57,4 +65,24 @@ body {
 .header-row-2 {
   display: grid;
   grid-template-columns: 10% 60% 10% 10% 10%;
+}
+
+.main-left {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.main-right {
+  display: grid;
+  grid-template-rows: 10% 40% 10% 40%;
+  padding-right: 8%;
+}
+
+.cards {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
