@@ -1,13 +1,19 @@
-.container, .sidebar, .sidebar-links, .header, .main-content, .cards, .announcements, .trends {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.container, .sidebar, .sidebar-links, .header, .main-content, .cards, .announcements, .trends, .logo-container {
   border: 2px solid red;
 }
 
-.main-left, .main-right, .card {
+.main-left, .main-right, .card, .logo-container > p {
   border: 2px solid green;
 }
 
 body {
   margin: 0px;
+}
+
+p, a {
+  font-family: 'Roboto', sans-serif;
 }
 
 .container {
@@ -33,6 +39,11 @@ body {
   grid-template-rows: 5% 25% 15%;
   padding: 5%;
   padding-right: 15%;
+  background-color: #0ea5e9;
+}
+
+.sidebar p, .sidebar a {
+  font-weight: bold;
 }
 
 .main-content {
@@ -44,17 +55,25 @@ body {
 }
 
 .logo-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 100%;
+  align-items: center;
+  gap: 3%;
+  font-size: 100%;
 }
 
 .sidebar-links {
   display: grid;
   grid-template-rows: 1fr;
   grid-auto-rows: 1fr;
+  gap: 5%;
 }
 
 .link-container {
-  display: flex;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 20% 80%;
 }
 
 .header-row-1 {
@@ -85,4 +104,31 @@ body {
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
+}
+
+.sidebar-links > div > img {
+  filter: invert(100%) sepia(63%) saturate(2%) hue-rotate(320deg) brightness(113%) contrast(101%);
+}
+
+.sidebar-links > div > a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo {
+  filter: invert(100%) sepia(63%) saturate(2%) hue-rotate(320deg) brightness(113%) contrast(101%);
+}
+
+.logo > img {
+  height: auto;
+  width: 100%;
+}
+
+.logo-container > p {
+  color: #FFFFFF;
+  font-size: 1.3rem;
+  margin: 0;
+  width: 100%;
+  height: auto;
 }
