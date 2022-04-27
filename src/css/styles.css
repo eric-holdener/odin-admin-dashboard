@@ -1,4 +1,4 @@
-* {
+.container, .sidebar, .sidebar-links, .header, .main-content {
   border: 2px solid red;
 }
 
@@ -16,14 +16,45 @@ body {
 .header {
   grid-column: 2;
   grid-row: 1 / 2;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
 }
 
 .sidebar {
   grid-column: 1;
   grid-row: 1 / 3;
+  display: grid;
+  gap: 40px;
+  grid-template-rows: 5% 25% 15%;
+  padding: 5%;
+  padding-right: 15%;
 }
 
 .main-content {
   grid-column: 2;
   grid-row: 2 / 3;
+}
+
+.logo-container {
+  display: flex;
+}
+
+.sidebar-links {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+}
+
+.link-container {
+  display: flex;
+}
+
+.header-row-1 {
+  display: grid;
+  grid-template-columns: 5% 70% 5% 5% 15%;
+}
+
+.header-row-2 {
+  display: grid;
+  grid-template-columns: 10% 60% 10% 10% 10%;
 }
