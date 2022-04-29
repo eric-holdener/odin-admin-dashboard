@@ -52,7 +52,7 @@ p, a, .header-button {
   grid-column: 2;
   grid-row: 2 / 3;
   display: grid;
-  grid-template-columns: 70% 30%;
+  grid-template-columns: 80% 20%;
   padding-bottom: 5%;
   background-color: rgb(224, 223, 223);
 }
@@ -213,4 +213,76 @@ p, a, .header-button {
 
 .card-buttons {
   justify-self: end;
+}
+
+.announcements {
+  display: grid;
+  grid-template-rows: 32% 1% 32% 1% 32%;
+  justify-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.announcement-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 5px;
+}
+
+.announcement {
+  width: 90%;
+  height: 100%;
+  padding-top: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.announcement-head {
+  margin: 0px;
+  align-self: end;
+  font-size: 1.05rem;
+  font-weight: bold;
+}
+
+.line {
+  height: 0px;
+  border: 1px solid gray;
+  width: 90%;
+}
+
+.trend > div > a {
+  text-decoration: none;
+}
+
+.trend-username {
+  color: black;
+}
+
+.trend-name {
+  color: gray;
+}
+
+.trends {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.trend {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  gap: 5%;
+  align-items: center;
+}
+
+.trend > img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+  justify-self: end;
+}
+
+.trend > div {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: auto;
 }
